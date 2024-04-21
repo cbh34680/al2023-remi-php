@@ -1,6 +1,6 @@
 # al2023-remi-php
 
-Add remi repository to AWS service EC2 instance Amazon Linux 2023 and install php versions 5.6, 7.x, 8.x.  
+Add remi repository to AWS EC2 instance Amazon Linux 2023 and install php versions 5.6, 7.x, 8.x.  
 
 install
 ```
