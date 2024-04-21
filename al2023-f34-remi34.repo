@@ -1,0 +1,54 @@
+# Repository: https://rpms.remirepo.net/
+# Blog:       https://blog.remirepo.net/
+# Forum:      https://forum.remirepo.net/
+
+# https://www.gclue.jp/2022/06/amazon-linux-2022-epel-fedora.html
+# https://w.atwiki.jp/sanosoft/pages/218.html
+
+[al2023-f34]
+name=Fedora 34 - $basearch
+#baseurl=http://download.example/pub/fedora/linux/releases/34/Everything/$basearch/os/
+metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-34&arch=$basearch&country=JP
+enabled=0
+countme=1
+metadata_expire=7d
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+#gpgkey=https://getfedora.org/static/fedora.gpg
+gpgkey=file:///usr/share/distribution-gpg-keys/fedora/RPM-GPG-KEY-fedora-34-primary
+skip_if_unavailable=False
+
+[al2023-f34-updates]
+name=Fedora 34 - $basearch - Updates
+#baseurl=http://download.example/pub/fedora/linux/updates/$releasever/Everything/$basearch/
+metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f34&arch=$basearch&country=JP
+enabled=0
+countme=1
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+metadata_expire=6h
+gpgkey=file:///usr/share/distribution-gpg-keys/fedora/RPM-GPG-KEY-fedora-34-primary
+skip_if_unavailable=False
+
+[al2023-remi34]
+name=Remi's RPM repository - Fedora 34 - $basearch
+#baseurl=http://rpms.remirepo.net/fedora/$releasever/remi/$basearch/
+mirrorlist=http://rpms.remirepo.net/archives/fedora/34/remi/$basearch/mirror
+enabled=0
+gpgcheck=1
+repo_gpgcheck=1
+fastestmirror=1
+gpgkey=file:///usr/share/distribution-gpg-keys/remi/RPM-GPG-KEY-remi-fedora-34
+
+[al2023-remi35]
+name=Remi's RPM repository - Fedora 35 - $basearch
+#baseurl=http://rpms.remirepo.net/fedora/$releasever/remi/$basearch/
+mirrorlist=http://rpms.remirepo.net/archives/fedora/35/remi/$basearch/mirror
+enabled=0
+gpgcheck=1
+repo_gpgcheck=1
+fastestmirror=1
+gpgkey=file:///usr/share/distribution-gpg-keys/remi/RPM-GPG-KEY-remi-fedora-35
+
