@@ -95,7 +95,7 @@ alternatives \
  --slave   /var/log/php-fpm     php-log     /var/opt/remi/php${phpv}/log/php-fpm/
 
 # Set php-timezone
-if grep -q -E '^;date\.timezone\s+=' /etc/php.ini;
+if grep -q -E '^;date\.timezone\s+=' /etc/php.ini
 then
   sed --follow-symlinks -i.bak -E \
    '/;date\.timezone\s+=/s/^;//; /^date\.timezone\s+=/s/$/ "Asia\/Tokyo"/' \
