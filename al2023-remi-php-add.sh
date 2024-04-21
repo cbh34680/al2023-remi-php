@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $(dirname $(readlink -f "${BASH_SOURCE:-}"))
+cd $(dirname $(readlink -f "${BASH_SOURCE:-$0}"))
 set -ex
 
 # Install function
