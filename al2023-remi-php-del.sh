@@ -13,7 +13,7 @@ dump_info() {
 }
 
 cd $(dirname $(readlink -f "${BASH_SOURCE:-}"))
-set -ex
+set -eux
 
 # Current install
 which php-config
@@ -45,7 +45,7 @@ rm -f /var/log/php-fpm /etc/php.ini
 semanage fcontext -lC | grep -F '/opt/remi/php' | grep -E '^/.*\s+=\s+/.*' \
  | sed -E 's/^(.+)\s+=\s+(.+)$/semanage fcontext -d -e \2 \1/' | bash
 semanage fcontext -d -t httpd_log_t /var/log/php-fpm || true
-restorecon -Rv /opt/remi/ /var/log/
+restorecon -Rv /opt/remi/ /var/log/ || true
 
 # Dump after
 tempf=$(mktemp -t ${tempfpfx}-after-XXXXX.tmp)
