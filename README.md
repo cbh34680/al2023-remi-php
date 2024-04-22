@@ -11,6 +11,7 @@ install
 uninstall
 ```
 # sh al2023-remi-php-del.sh
+# rm /etc/yum.repos.d/al2023-f34-remi34.repo
 ```
 
 At your own risk.
