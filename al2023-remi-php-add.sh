@@ -21,7 +21,7 @@ install_php() {
   dnf -q -y \
    --excludepkgs='php php-* php8.*' \
    --enablerepo="al2023-f34*,al2023-remi${remiv}*" \
-   --exclude='php-*' install "${mods[@]}"
+   install "${mods[@]}"
 }
 
 # Dump function
