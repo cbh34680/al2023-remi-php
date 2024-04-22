@@ -72,14 +72,13 @@ then
 fi
 
 install_php ${remiv} ${phpv} \
- cli common fpm pear devel
+ cli common fpm mbstring pear devel
 
 if ! [ "${MINIMUL}" = '1' ]
 then
   install_php ${remiv} ${phpv} \
-   bcmath intl mbstring mysqlnd pdo \
-   pecl-igbinary pecl-imagick-im7 pecl-memcache pecl-memcached \
-   pecl-redis pecl-geoip pecl-imagick-im7
+   bcmath intl mysqlnd pdo \
+   pecl-imagick-im7 pecl-memcache pecl-redis 
 fi
 
 # Register alternative
