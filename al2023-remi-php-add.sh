@@ -114,7 +114,7 @@ done
 # Register php-fpm as an alias
 mkdir /etc/systemd/system/php${phpv}-php-fpm.service.d || true
 
-cat << 'EOF' >> /etc/systemd/system/php${phpv}-php-fpm.service.d/override.conf
+cat << 'EOF' > /etc/systemd/system/php${phpv}-php-fpm.service.d/alias.conf
 [Install]
 Alias=php-fpm.service
 EOF
