@@ -83,15 +83,18 @@ fi
 
 # Register alternative
 alternatives \
- --install /usr/bin/php         php         ${remidir}/root/usr/bin/php      20 \
- --slave   /usr/bin/pear        pear        ${remidir}/root/usr/bin/pear        \
- --slave   /usr/bin/pecl        pecl        ${remidir}/root/usr/bin/pecl        \
- --slave   /usr/bin/phar.phar   phar        ${remidir}/root/usr/bin/phar.phar   \
- --slave   /usr/bin/phpize      phpize      ${remidir}/root/usr/bin/phpize      \
- --slave   /usr/bin/php-cgi     php-cgi     ${remidir}/root/usr/bin/php-cgi     \
- --slave   /usr/bin/php-config  php-config  ${remidir}/root/usr/bin/php-config  \
- --slave   /etc/php.ini         php-ini     /etc/opt/remi/php${phpv}/php.ini    \
- --slave   /var/log/php-fpm     php-log     /var/opt/remi/php${phpv}/log/php-fpm/
+ --install /usr/bin/php         php           ${remidir}/root/usr/bin/php         20 \
+ --slave   /usr/bin/pear        pear          ${remidir}/root/usr/bin/pear           \
+ --slave   /usr/bin/pecl        pecl          ${remidir}/root/usr/bin/pecl           \
+ --slave   /usr/bin/phar.phar   phar          ${remidir}/root/usr/bin/phar.phar      \
+ --slave   /usr/bin/phpize      phpize        ${remidir}/root/usr/bin/phpize         \
+ --slave   /usr/bin/php-cgi     php-cgi       ${remidir}/root/usr/bin/php-cgi        \
+ --slave   /usr/bin/php-config  php-config    ${remidir}/root/usr/bin/php-config     \
+ --slave   /etc/php.ini         php-ini       /etc/opt/remi/php${phpv}/php.ini       \
+ --slave   /etc/php.d           php-d         /etc/opt/remi/php${phpv}/php.d         \
+ --slave   /etc/php-fpm.conf    php-fpm-conf  /etc/opt/remi/php${phpv}/php-fpm.conf  \
+ --slave   /etc/php-fpm.d       php-fpm-d     /etc/opt/remi/php${phpv}/php-fpm.d     \
+ --slave   /var/log/php-fpm     php-log       /var/opt/remi/php${phpv}/log/php-fpm/
 
 # Set php-timezone
 if grep -q -E '^;date\.timezone\s+=' /etc/php.ini
