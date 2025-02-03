@@ -16,4 +16,7 @@ uninstall
 
 At your own risk.
 
-Note: For versions 8.2 and later, please use the dnf command for regular installation.
+Note
+------------
+> The purpose is to run unsupported versions of PHP on Amazon Linux 2023.  
+> For versions 8.2 and later, please use the dnf command for regular installation.  
