@@ -8,7 +8,7 @@
 [al2023-f34]
 name=Fedora 34 - $basearch
 #baseurl=http://download.example/pub/fedora/linux/releases/34/Everything/$basearch/os/
-metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-34&arch=$basearch&country=JP
+metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-34&arch=$basearch
 enabled=0
 countme=1
 metadata_expire=7d
@@ -22,7 +22,7 @@ skip_if_unavailable=False
 [al2023-f34-updates]
 name=Fedora 34 - $basearch - Updates
 #baseurl=http://download.example/pub/fedora/linux/updates/$releasever/Everything/$basearch/
-metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f34&arch=$basearch&country=JP
+metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f34&arch=$basearch
 enabled=0
 countme=1
 repo_gpgcheck=0
